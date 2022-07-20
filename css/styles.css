@@ -1,28 +1,30 @@
 :root {
   --primery-font: "Roboto", sans-serif;
   --secondary-font: "Raleway", sans-serif;
-
   --primery-font-size: 14px;
   --secondary-font-size: 16px;
   --primery-letter-spacing: 0.03em;
-
   --primery-background: #2f303a;
   --secondary-background: #f5f4fa;
-
   --primery-color-text-white-them: #212121;
   --secondary-color-text-white-them: #757575;
   --primery-color-text-dark-them: #ffffff;
   --secondary-color-text-dark-them: #ffffff 60 %;
-
   --accent-color: #2196f3;
   --border-color: #eeeeee;
   --logo-black-color: #000000;
-
   --color-seven: #f5f4fa;
   --color-nine: #2f303a;
   --color-ten: #ececec;
   --color-eleven: #000000 20 %;
   --color-twelwe: #188ce8;
+}
+body {
+  background-color: var(--primery-color-text-dark-them);
+  color: var(--secondary-background);
+  font-family: var(--primery-font);
+  font-size: var(--primery-font-size);
+  letter-spacing: var(--primery-letter-spacing);
 }
 h1,
 h2,
@@ -31,8 +33,7 @@ h4,
 h5,
 h6,
 p {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 ul,
 ol {
@@ -45,39 +46,40 @@ img {
   max-width: 100%;
   height: auto;
 }
-body {
-  background-color: var(--primery-color-text-dark-them);
-  color: var(--secondary-background);
-  font-family: var(--primery-font);
-  font-size: var(--primery-font-size);
-  letter-spacing: var(--primery-letter-spacing);
+address {
+  font-style: normal;
 }
 button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 32px;
   cursor: pointer;
+  border: none;
+  border-radius: 4px;
 }
 .conteiner {
   width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
-.list {
-  list-style: none;
-}
-.link {
-  text-decoration: none;
-}
-.list {
-  display: flex;
-  align-items: center;
-}
-
-/* ==========COMPONENTS================= */
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+.list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==========COMPONENTS================= */
+
 .title-second {
   margin-bottom: 50px;
   font-weight: 700;
@@ -119,24 +121,23 @@ button {
 
 /* ==========/COMPONENTS=================== */
 /* =============HEADER===================== */
-.top-header {
-  padding-top: 32px;
-  padding-bottom: 32px;
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
   border: 1px solid var(--secondary-background);
 }
-.page-nav-conteiner {
+.header-nav-conteiner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
-.top-nav {
+.header-nav {
   display: flex;
   align-items: center;
 }
 .logo {
   margin-right: 95px;
 }
-.menu {
+.header-menu {
   display: flex;
   align-items: center;
 }
@@ -158,8 +159,10 @@ button {
 .current {
   color: var(--accent-color);
 }
-
-.contakt {
+.header-contact-list {
+  margin-left: auto;
+}
+.header-contakt {
   font-style: normal;
   font-weight: 500;
   font-size: var(--primery-font-size);
@@ -167,19 +170,19 @@ button {
   letter-spacing: 0.02em;
   color: var(--secondary-color-text-white-them);
 }
-.contakt:hover,
-.contakt:focus {
+.header-contakt:hover,
+.header-contakt:focus {
   color: var(--accent-color);
 }
 /* =============/HEADER===================== */
 /* =============HERO======================== */
 .hero {
   background-color: var(--primery-background);
+  padding-top: 200px;
+  padding-bottom: 200px;
   text-align: center;
 }
-.conteiner-hero {
-  padding-top: 200px;
-}
+
 .hero-title {
   width: 696px;
   margin-left: auto;
@@ -194,14 +197,12 @@ button {
   color: var(--primery-color-text-dark-them);
 }
 
-.modal-btn {
+.hero-button {
   background-color: var(--accent-color);
-  border-radius: 4px;
   min-width: 200px;
   padding: 10px 32px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 200px;
   font-weight: 700;
   font-size: var(--secondary-font-size);
   line-height: 1.88;
@@ -210,24 +211,24 @@ button {
   letter-spacing: 0.06em;
   color: var(--primery-color-text-dark-them);
 }
-.modal-btn:hover,
-.modal-btn:focus {
+.hero-button:hover,
+.hero-button:focus {
   background-color: var(--color-twelwe);
 }
 /* =============/HERO===================== */
 /* ============= ABOUT=====================*/
-.our-principles {
+.principe-conteiner {
   display: flex;
   flex-wrap: wrap;
 }
-.principe-list {
+.principe-item {
   text-align: left;
   width: 270px;
 }
-.principe-list:not(:last-child) {
+.principe-item:not(:last-child) {
   margin-right: 30px;
 }
-.about-list {
+.principe-title {
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -235,7 +236,7 @@ button {
   text-transform: uppercase;
   color: var(--primery-color-text-white-them);
 }
-.description {
+.principe-description {
   padding-top: 2px;
   padding-bottom: 2px;
   line-height: 1.71;
@@ -243,7 +244,10 @@ button {
 }
 /* ============/ABOUT=================== */
 /* ============WORKS=================== */
-.conteiner-works {
+.work-section {
+  padding-top: none;
+}
+.works-conteiner {
   flex-wrap: wrap;
   align-items: center;
 }
@@ -255,26 +259,26 @@ button {
 }
 /* ============/WORKS==================== */
 /* ============STAFF==================== */
-.staff {
+.staff-section {
   background-color: var(--secondary-background);
 }
-.conteiner-person {
+.staff-conteiner {
   flex-wrap: wrap;
   align-items: center;
 }
-.person-item:not(:nth-child(4n)) {
+.staff-item:not(:nth-child(4n)) {
   margin-right: 30px;
 }
-.person-item {
-  background: var(--secondary-background);
+.staff-item {
+  background: var(--primery-color-text-dark-them);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.img-person {
-  margin-bottom: 30px;
+.person-descriptione {
+  padding: 30px 0px;
 }
-.name-person {
+.person-name {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: var(--secondary-font-size);
@@ -282,8 +286,7 @@ button {
   text-align: center;
   color: var(--primery-color-text-white-them);
 }
-.position-person {
-  margin-bottom: 30px;
+.person-position {
   line-height: 1.19;
   text-align: center;
   font-size: var(--secondary-font-size);
@@ -302,22 +305,19 @@ button {
 }
 .filter-button {
   display: block;
-  height: 38px;
   padding: 6px 22px;
   background-color: var(--secondary-background);
-  border: 1px solid transparent;
-  border-radius: 4px;
   font-weight: 500;
   font-size: var(--secondary-font-size);
   line-height: 1.63;
   letter-spacing: inherit;
   text-align: center;
-  color: var(--secondary-color-text-white-them);
+  color: var(-primery-color-text-white-them);
 }
 .filter-button:hover,
 .filter-button:focus {
   background-color: var(--accent-color);
-  color: var(--primery-color-text-white-them);
+  color: var(--primery-color-text-dark-them);
 }
 .portfolio-list {
   display: flex;
@@ -326,70 +326,56 @@ button {
 }
 
 .portfolio-item {
-  border: px solid var(--secondary-background);
   flex-basis: calc(100%-60px / 3);
 }
 .portfolio-title {
   margin-bottom: 4px;
-  margin-left: 24px;
-  margin-right: 24px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: var(--secondary-color-text-white-them);
+  color: var(--primery-color-text-white-them);
 }
 .portfolio-type {
-  margin-left: 24px;
   font-size: var(--secondary-font-size);
   line-height: 1.89;
-  letter-spacing: 0.03em;
   color: var(--secondary-color-text-white-them);
 }
 .portfolio-wrapper {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 24px;
   border: 1px solid var(--border-color);
   border-top: none;
 }
 /* ============FOOTER================== */
 .footer {
   background-color: var(--primery-background);
-}
-.list-footer {
-  display: block;
-}
-
-.conteiner-adress {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
-.list-footer {
+.footer-address {
+  margin-bottom: 9px;
   margin-top: 20px;
 }
-.c-footer {
+.footer-list {
+  display: block;
+}
+.footer-item:not(:last-child(3n)) {
   margin-bottom: 9px;
 }
-.c-footer:not(:last-child3n) {
-  margin-bottom: 9px;
-}
-.adress {
-  margin-bottom: 9px;
-  font-style: normal;
+.address-map {
   font-size: var(--primery-font-size);
   line-height: 1.71;
-  letter-spacing: 0.03em;
   color: var(--primery-color-text-dark-them);
 }
-.contact-footer {
-  font-style: normal;
+
+.footer-contact {
   font-size: var(--primery-font-size);
   line-height: 1.71;
   color: var(--secondary-color-text-white-them);
 }
-.contact-footer:hover,
-.contact-footer:focus,
+
+.footer-contact:hover,
+.footer-contact:focus,
 .adress:hover,
 .adress:focus {
   color: var(--accent-color);

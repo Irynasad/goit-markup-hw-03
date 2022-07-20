@@ -18,23 +18,23 @@
 
 <body>
 	<!--------------------------HEADER-------------------------------------------->
-	<header class="top-header">
-		<div class="conteiner page-nav-conteiner">
-			<nav class="top-nav">
+	<header class="header">
+		<div class="conteiner header-nav-conteiner">
+			<nav class="header-nav">
 				<a class="logo link" href="./index.html" lang="en">Web<span class="studio studio-dark">Studio</span>
 				</a>
-				<ul class="menu header-list list">
+				<ul class="header-menu header-list list">
 					<li class="menu-item"><a class="menu-link current link" href="./index.html">Студия</a></li>
 					<li class="menu-item"><a class="menu-link link" href="./portfolio.html">Портфолио</a></li>
 					<li class="menu-item"><a class="menu-link link" href="#">Контакты</a></li>
 				</ul>
 			</nav>
-			<ul class="list">
-				<li>
-					<a class="contakt link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+			<ul class="header-contact-list list">
+				<li class="header-contakt">
+					<a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a>
 				</li>
-				<li>
-					<a class="contakt contact-tel link" href="tel:+380961111111">+38 096 111 11 11</a>
+				<li class="header-contakt">
+					<a class="contact-tel link" href="tel:+380961111111">+38 096 111 11 11</a>
 				</li>
 			</ul>
 		</div>
@@ -42,39 +42,39 @@
 	<main>
 		<!-----------------------------HERO-------------------------------------->
 		<section class="hero">
-			<div class="conteiner conteiner-hero">
+			<div class="conteiner">
 				<h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-				<button class="modal-btn" type="button">Заказать услугу</button>
+				<button class="hero-button" type="button">Заказать услугу</button>
 			</div>
 		</section>
 		<!-------------------------ABOUT------------------------------------->
 		<section class="section">
-			<div class="conteiner our-principles">
+			<div class="conteiner principe-conteiner">
 				<h2 class="visually-hidden">Наши принципы</h2>
-				<ul class="list principe-description">
-					<li class="principe-list">
-						<h3 class="about-list">Внимание к деталям</h3>
-						<p class="description">Идейные соображения, а также начало повседневной
+				<ul class="list principe-list">
+					<li class="principe-item">
+						<h3 class="principe-title">Внимание к деталям</h3>
+						<p class="principe-description">Идейные соображения, а также начало повседневной
 							работы по формированию
 							позиции</p>
 					</li>
-					<li class="principe-list">
-						<h3 class="about-list">Пунктуальность</h3>
-						<p class="description">Задача организации, в особенности же рамки и место
+					<li class="principe-item">
+						<h3 class="principe-title">Пунктуальность</h3>
+						<p class="principe-description">Задача организации, в особенности же рамки и место
 							обучения кадров влечет
 							за собой.
 						</p>
 					</li>
-					<li class="principe-list">
-						<h3 class="about-list">Планирование</h3>
-						<p class="description">Равным образом консультация с широким активом в
+					<li class="principe-item">
+						<h3 class="principe-title">Планирование</h3>
+						<p class="principe-description">Равным образом консультация с широким активом в
 							значительной степени
 							обуславливает.
 						</p>
 					</li>
-					<li class="principe-list">
-						<h3 class="about-list">Современные технологии</h3>
-						<p class="description">Значимость этих проблем настолько очевидна, что
+					<li class="principe-item">
+						<h3 class="principe-title">Современные технологии</h3>
+						<p class="principe-description">Значимость этих проблем настолько очевидна, что
 							реализация плановых
 							заданий.</p>
 					</li>
@@ -82,8 +82,8 @@
 			</div>
 		</section>
 		<!---------------------------WORKS-------------------------------------->
-		<section class="section">
-			<div class="conteiner conteiner-works">
+		<section class="work-section">
+			<div class="conteiner works-conteiner">
 				<h2 class="title-second">Чем мы занимаемся</h2>
 				<ul class="list">
 					<li class="work-item">
@@ -101,33 +101,41 @@
 		</section>
 		<!-----------------------------STAFF-------------------------------------->
 
-		<section class="section staff">
-			<div class="conteiner conteiner-person">
+		<section class="section staff-section">
+			<div class="conteiner staff-conteiner">
 				<h2 class="title-second">Наша команда</h2>
-				<ul class="person list">
-					<li class="person-item">
-						<img class="img-person" src="./images/employees/igor.jpg" alt="фото специалиста" width="270"
+				<ul class="staff-list list">
+					<li class="staff-item">
+						<img class="person-img" src="./images/employees/igor.jpg" alt="фото специалиста" width="270"
 							height="260" />
-						<h3 class="name-person">Игорь Демьяненко</h3>
-						<p class="position-person" lang="en">Product Designer</p>
+						<div class="person-descriptione">
+							<h3 class="person-name">Игорь Демьяненко</h3>
+							<p class="person-position" lang="en">Product Designer</p>
+						</div>
 					</li>
-					<li class="person-item">
-						<img class="img-person" src="./images/employees/olga.jpg" alt="фото специалиста" width="270"
+					<li class="staff-item">
+						<img class="person-img" src="./images/employees/olga.jpg" alt="фото специалиста" width="270"
 							height="260" />
-						<h3 class="name-person">Ольга Репина</h3>
-						<p class="position-person" lang="en">Frontend Developer</p>
+						<div class="person-descriptione">
+							<h3 class="person-name">Ольга Репина</h3>
+							<p class="person-position" lang="en">Frontend Developer</p>
+						</div>
 					</li>
-					<li class="person-item">
-						<img class="img-person" src="./images/employees/nikolay.jpg" alt="фото специалиста" width="270"
+					<li class="staff-item">
+						<img class="person-img" src="./images/employees/nikolay.jpg" alt="фото специалиста" width="270"
 							height="260" />
-						<h3 class="name-person">Николай Тарасов</h3>
-						<p class="position-person" lang="en">Marketing</p>
+						<div class="person-descriptione">
+							<h3 class="person-name">Николай Тарасов</h3>
+							<p class="person-position" lang="en">Marketing</p>
+						</div>
 					</li>
-					<li class="person-item">
-						<img class="img-person" src="./images/employees/mihail.jpg" alt="фото специалиста" width="270"
+					<li class="staff-item">
+						<img class="person-img" src="./images/employees/mihail.jpg" alt="фото специалиста" width="270"
 							height="260" />
-						<h3 class="name-person">Михаил Ермаков</h3>
-						<p class="position-person" lang="en">UI Designer</p>
+						<div class="person-descriptione">
+							<h3 class="person-name">Михаил Ермаков</h3>
+							<p class="person-position" lang="en">UI Designer</p>
+						</div>
 					</li>
 				</ul>
 			</div>
@@ -135,24 +143,21 @@
 	</main>
 	<!--------------------------------FOOTER---------------------------------------------->
 	<footer class="footer">
-		<div class="conteiner conteiner-adress">
-			<a class="logo logo-footer link" href="./index.html" lang="en">Web<span
-					class="studio studio-light">Studio</span></a>
-			<address>
-				<ul class="list list-footer">
-					<li>
-						<a class="adress c-footer link" href="https://goo.gl/maps/8h2HunKueYunkRmM7" target="_blank"
+		<div class="conteiner">
+			<a class="logo link" href="./index.html" lang="en">Web<span class="studio studio-light">Studio</span></a>
+			<address class="footer-address">
+				<ul class="list footer-list">
+					<li class="footer-item">
+						<a class="address-map link" href="https://goo.gl/maps/8h2HunKueYunkRmM7" target="_blank"
 							rel="noopener noreferrer">
 							г. Киев, пр-т Леси Украинки, 26
 						</a>
 					</li>
-
-					<li>
-						<a class="contact-footer c-footer link" href="mailto:info@example.com"
-							lang="en">info@example.com</a>
+					<li class="footer-item">
+						<a class="footer-contact link" href="mailto:info@example.com" lang="en">info@example.com</a>
 					</li>
-					<li>
-						<a class="contact-footer c-footer link" href="tel:+380991111111">+38 099 111 11 11</a>
+					<li class="footer-item">
+						<a class="footer-contact link" href="tel:+380991111111">+38 099 111 11 11</a>
 					</li>
 				</ul>
 			</address>
