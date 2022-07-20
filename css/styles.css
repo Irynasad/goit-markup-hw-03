@@ -245,7 +245,7 @@ button {
 /* ============/ABOUT=================== */
 /* ============WORKS=================== */
 .work-section {
-  padding-top: none;
+  padding-top: 0;
 }
 .works-conteiner {
   flex-wrap: wrap;
