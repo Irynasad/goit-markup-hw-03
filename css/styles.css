@@ -237,8 +237,6 @@ button {
   color: var(--primery-color-text-white-them);
 }
 .principe-description {
-  padding-top: 2px;
-  padding-bottom: 2px;
   line-height: 1.71;
   color: var(--secondary-color-text-white-them);
 }
@@ -353,13 +351,12 @@ button {
   padding-bottom: 60px;
 }
 .footer-address {
-  margin-bottom: 9px;
   margin-top: 20px;
 }
 .footer-list {
   display: block;
 }
-.footer-item:not(:last-child(3n)) {
+.footer-item:not(:last-child) {
   margin-bottom: 9px;
 }
 .address-map {
